@@ -1,0 +1,65 @@
+
+<script src="../student-detail/student-detail.component.ts"></script>
+<div *ngIf="this.authorities.includes('ROLE_ADMIN') ">
+  <div>
+    <label for="search">Search by Name</label>
+    <input type="text" id="search" [(ngModel)]="searchTerm" (input) ="filterStudents()" placeholder="Enter Student name">
+  </div>
+  <div class='full-input'>
+    <label>Student first name:
+      <input type=text #studentFirstName />
+    </label>
+  </div>
+  <div class='full-input'>
+     <label>Student last name:
+       <input type=text #studentLastName />
+     </label>
+  </div>
+  <div class='full-input'>
+    <label>Student email:
+      <input type=text #studentEmail />
+    </label>
+  </div >
+  <div class='full-input'>
+    <label>Student phone number:
+      <input type=text name="telephone" #studentTelephone />
+    </label>
+  </div>
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button *ngIf = "false" (click)="add(studentFirstName.value, studentLastName.value, studentEmail.value, studentTelephone.value);
+                  studentFirstName.value=''; studentLastName.value=''; studentEmail.value=''; studentTelephone.value=''">
+    add
+  </button>
+  <button  *ngIf = "false" (click)="patch(studentFirstName.value, studentLastName.value, studentEmail.value, studentTelephone.value);
+    studentFirstName.value=''; studentLastName.value=''; studentEmail.value=''; studentTelephone.value=''">
+    patch
+  </button>
+  <table>
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Phone Number</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let student of filteredStudentList">
+        <td>{{student.id}}</td>
+        <td>{{student.firstname}}</td>
+        <td>{{student.lastname}}</td>
+        <td>{{student.email}}</td>
+        <td>{{student.telephone}}</td>
+      <a class="nav-link" routerLink="/students/{{student.id}}" > Student's Lessons</a>
+
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+<div *ngIf="!(this.authorities.includes('ROLE_ADMIN')) ">
+  heeee
+<app-student-detail></app-student-detail>
+</div>

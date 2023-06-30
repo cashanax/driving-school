@@ -1,0 +1,61 @@
+/* DashboardComponent's private CSS styles */
+
+div {
+text-align: center;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 6px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+button {
+  background-color: #049AFF;
+  color: white;
+  padding: 6px 10px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  position: center;
+  ;
+  width: 40%;
+}
+button:hover {
+  opacity: 0.8;
+}
+
+
+
+a {
+  background-color: #3f525c;
+  border-radius: 2px;
+  padding: 1rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  min-width: 70px;
+  margin: .5rem auto;
+  box-sizing: border-box;
+
+  /* flexbox */
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+
+@media (min-width: 600px) {
+  a {
+    width: 18%;
+    box-sizing: content-box;
+  }
+}
+
+a:hover {
+  background-color: #000;
+}

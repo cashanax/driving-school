@@ -1,0 +1,45 @@
+<div  *ngIf="student" >
+<app-lessons></app-lessons>
+  <h2>{{student.firstname}} {{ student.lastname | uppercase}} Details</h2>
+  <div >
+    <p>id: {{student.id}}</p>
+    <p>Firstname: {{student.firstname}}</p>
+    <p>Lastname: {{student.lastname}}</p>
+    <p>Email: {{student.email}}</p>
+    <p>Phone number: {{student.telephone}}</p>
+
+
+      <br>
+      <!-- (click) passes input value to add() and then clears the input -->
+
+
+      <ng-container  >
+
+        <table >
+          <thead>
+          <tr>
+            <th>Id</th>
+            <th>Date</th>
+            <th>Hour</th>
+            <th>Instructor</th>
+            <th>Location</th>
+            <th>State</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let lesson of student.lessonList">
+            <td>{{lesson.id}}</td>
+            <td>{{ lesson.date }}</td>
+            <td>{{ lesson.hour }}</td>
+            <td>{{ lesson.instructor }}</td>
+            <td>{{ lesson.location }}</td>
+            <td>{{lesson.approved}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </ng-container>
+
+    </div>
+</div>
+
+

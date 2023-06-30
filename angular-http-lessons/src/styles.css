@@ -1,0 +1,128 @@
+/* You can add global styles to this file, and also import other style files */
+div{
+
+}
+div a {
+  text-align: left;
+  float: left;
+}
+table{
+  margin-top: 16px;
+  margin-right:auto;
+  margin-left: auto;
+}
+th, td{
+
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+}
+
+th{
+  height: 30px;
+}
+
+nav a {
+  padding: 4px 4px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+  margin-right: 4px
+}
+nav a:visited, a:link {
+  color:#607D8B;
+}
+nav a:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+
+
+button {
+  padding: 8px 15px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #DEDEDE;
+  border-radius: 4px;
+  border-width: 0px;
+  color: black;
+  margin-right: 8px;
+  font-size: 15px;
+  vertical-align: central;
+  cursor: pointer;
+}
+
+button:hover {
+  color: white;
+  background-color: #40C9FF;
+
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 6px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+.row col-sm-6 {
+  padding: 0;
+  margin: auto;
+  max-width: 1000px;
+
+  /* flexbox */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+form{
+  margin-top: 4px;
+}
+
+.form-wrapper {
+  margin-left: 220px;
+  margin-right: auto;
+}
+.full-input {
+  display: inline-block;
+  padding: 3px;
+  border: 2px #DEDEDE;
+}
+input {
+  outline: none;
+  border: none;
+  display:block;
+  line-height: 1em;
+  font-size: 12pt;
+  margin-left: 10px;
+}
+label {
+  display: block;
+  font-size: 12px;
+  color: black;
+
+}
+.grid{
+  display: grid;
+  place-items: center;
+}
+.container{
+  margin: 40px;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,24 @@
+<div class="page-header">
+  <div class="container"  >
+    <h1 [routerLink]="['/home']" style="cursor: pointer" >Driving School</h1>
+    <nav>
+      <a [routerLink]="['/home']">Home </a>
+      <a *ngIf="authority === 'admin'" [routerLink]="['/students']">Students</a>
+      <a *ngIf="authority === 'user' " class="nav-link" routerLink="students/202">Student Page</a>
+      <a *ngIf="authority === 'admin'" class="nav-link" routerLink="admin">Admin Page</a>
+      <a *ngIf="!authority" style="float:right" class="nav-link" routerLink="auth/login">Login</a>
+      <button *ngIf="authority"  style="float:right" (click)="logout()">Logout</button>
+    </nav>
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+<div id="content">
+  <div class="" >
+    <router-outlet></router-outlet>
+  </div>
+
+</div>
+
