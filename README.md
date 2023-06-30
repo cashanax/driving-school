@@ -1,2 +1,2 @@
 # driving-school
-Solution for communication between treinee and tutor
+A solution for communication between students and tutors
